@@ -1,0 +1,6 @@
+<?php
+class Maillist extends AppModel
+{
+        var $name = 'Maillist';
+}
+?>

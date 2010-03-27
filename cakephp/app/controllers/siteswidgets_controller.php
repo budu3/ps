@@ -1,0 +1,18 @@
+<?php
+class SiteswidgetsController extends AppController{
+	var $name = 'Siteswidgets';
+	
+	function index(){
+
+	}
+
+	function getWidgets($id){
+		$this->layout = 'json';
+		//$ans = $this->Siteswidget->find('all', array('conditions' => array('Siteswidget.id =' => $id)));
+		$ans = $this->Siteswidget->query("SELECT cp_widgets.sitename, message, displayurl, landingpage FROM cp_siteswidgets, cp_widgets, cp_sites WHERE ( cp_siteswidgets.site_id =2) AND (cp_sites.id = cp_siteswidgets.id);");
+		$this->set('getwidgets',$ans);
+	}
+
+	
+}
+?>

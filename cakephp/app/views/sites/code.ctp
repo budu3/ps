@@ -1,0 +1,68 @@
+<h2>Dashboard</h2>
+
+<h3>Code</h3>
+
+Code Snippet:<br/>
+<textarea rows = 15 cols = 35>
+	<script>
+
+
+	glow.ready(function() {
+	    var p = glow.dom.get("#adletcontainer");
+	    //var timer = 5000;
+	    var t;
+	    var c = 0;
+	    var toggle = false;
+	    //p.html("hello, world");
+		//glow.anim.fadeOut("#adletcontainer",2);
+		//glow.anim.slideDown("#adletcontainer",5);
+	
+		glow.events.addListener("#close", "click", function(){
+							glow.dom.get("#adletcontainer").css("display","none");
+							//timer += 10;
+						}
+					);
+	
+	
+		glow.events.addListener("#close", "mouseover", function(){glow.dom.get("#close").css("background-color","#B0B0B0")});
+		glow.events.addListener("#close", "mouseout", function(){glow.dom.get("#close").css("background-color","#E5EAF1")});
+		
+		var txt;
+		var request = glow.net.get("http://localhost/cakephp/siteswidgets/getwidgets/1", { onLoad:function(response){
+		
+					//var program = response.text();
+					var j = response.json();
+					//k =eval("("+j+")");
+					sitename = j.widget[0].sitename;
+					message = j.widget[0].message;
+					displayurl =j.widget[0].displayurl;
+					landingpage = j.widget[0].landingpage;
+					version = j.widget[0].version;
+					//json = "("+eval(program)+")";
+					alert(sitename+" "+message+" "+displayurl+" "+landingpage+" "+version);			
+				}
+
+		});
+
+
+		setInterval(
+			function (){
+		
+				if (toggle == true){
+					glow.anim.fadeIn("#adletcontainer",20);
+					toggle = false;	
+				
+				}else{
+					glow.anim.fadeOut("#adletcontainer",2);
+					toggle = true;
+				}
+			}, 30000
+
+		)
+	
+	
+	})
+	
+</script>
+
+</textarea>

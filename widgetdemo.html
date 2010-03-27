@@ -1,0 +1,166 @@
+<html>
+<head>
+	<title>Demo Widget</title>
+	<link rel="stylesheet" type="text/css" href="css/adlet.css">
+	<script src="glow/1.7.2/core/core.js" type="text/javascript"></script> 
+	<script src="glow/1.7.2/widgets/widgets.js" type="text/javascript"></script> 
+	<link href="glow/1.7.2/widgets/widgets.css" rel="stylesheet" type="text/css" class="gloaded async">
+
+	
+</head>
+<body>
+
+<style>
+	/* Set the width of the carousel and the view window to be the same */
+div.carousel5 div#layeredCarousel,
+div.carousel5 div.carousel-light div.carousel-window {
+        width: 360px !important;
+}
+
+/* Set the prev button to be absolutely positioned to the left of the carousel */
+div.carousel5 div.carousel-light a.carousel-prev {
+        background: transparent url(/glow/images/gradient-left.png) top left repeat-y;
+        _background: none;
+        _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                src="/glow/images/gradient-left.png",sizingMethod=scale);
+        left: 0;
+        position: absolute;
+        width: 104px;
+}
+
+/* Set the next button to be absolutely positioned to the right of the carousel */
+div.carousel5 div.carousel-light a.carousel-next {
+        background: transparent url(/glow/images/gradient-right.png) top right repeat-y;
+        _background: none;
+        _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                src="/glow/images/gradient-right.png",sizingMethod=scale);
+        position: absolute;
+        right: 0;
+        width: 104px;
+}
+.carousel5 a.carousel-next .carousel-arrow {
+        left: 84px;
+}
+
+/* Because the carousel buttons use transparent images, we need to hide the child elements of the links */
+.carousel5 a.carousel-nav .carousel-label,
+.carousel5 a.carousel-nav .carousel-background,
+.carousel5 a.carousel-nav .carousel-top,
+.carousel5 a.carousel-nav .carousel-bottom {
+        visibility: hidden;
+}
+
+/* Pad out the list elements */
+ol#carousel5 li {
+        margin: 20px 10px;
+}
+</style>
+
+
+<script>
+var i = 0;
+var d_title = [];
+var d_msg = [];
+var d_url = [];
+
+d_title[0] = "pesulu";
+d_msg[0] = "Ads that don't suck!";
+d_url[0] = "http://www.pesulu.com";
+
+d_title[1] = "dropbox";
+d_msg[1] = "Sync your files online and across computers";
+d_url[1] = "https://www.dropbox.com/referrals/NTIyMTk1NDE5";
+
+function clickLeft(){
+		//alert(document.getElementById("adletleftcontent").innerHTML);
+		++i
+		if (i >= d_title.length){
+			i=0;
+		}
+		//glow.dom.get("#adletleftcontent").innerHTML = "<b>test</b>";
+		glow.anim.fadeOut("#adletcontent",200);
+		glow.anim.fadeIn("#adletcontent",200,function onComplete(){document.getElementById("adletleftcontent").innerHTML = d_title[i]});
+		
+		document.getElementById("adletrightcontent").innerHTML = d_msg[i];
+		document.getElementById("url").innerHTML = d_url[i];
+		document.getElementById("url").href = d_url[i];
+		document.getElementById("adletleftcontent").innerHTML = d_title[i];
+}
+
+function rotate(direction){
+		(direction == "left")?++i:--i;
+
+		if (i >= d_title.length || i < 0){
+			i=0
+		}
+		//glow.dom.get("#adletleftcontent").innerHTML = "<b>test</b>";
+		glow.anim.fadeOut("#adletcontent",200);
+		glow.anim.fadeIn("#adletcontent",200,function onComplete(){document.getElementById("adletleftcontent").innerHTML = d_title[i]});
+		
+		document.getElementById("adletrightcontent").innerHTML = d_msg[i];
+		document.getElementById("url").innerHTML = d_url[i];
+		document.getElementById("url").href = d_url[i];
+		document.getElementById("adletleftcontent").innerHTML = d_title[i];
+}
+			glow.ready(function() {
+ 
+			glow.anim.fadeOut("#adletcontainer",50);
+			glow.events.addListener("#leftnav", "click", clickLeft);
+			glow.events.addListener("#leftnav", "mouseover", function(){document.getElementById("leftnav").style.borderColor='#FFFFFF';});
+			glow.events.addListener("#rightnav", "click", rotate("right"));
+			
+var carousel5 = new glow.widgets.Carousel("#carousel5",{
+        id: "layeredCarousel",
+        loop: true,
+        size: 3
+});
+// Move back one item in order to display first item in the centre
+carousel5.moveBy(-1,false);
+
+
+
+})
+</script>
+
+<ol id="carousel5">
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/bbc_one.gif" alt="BBC One" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/bbc_two.gif" alt="BBC Two" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/bbc_three.gif" alt="BBC Three" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/bbc_four.gif" alt="BBC Four" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/bbc_hd.gif" alt="BBC HD" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/cbbc.gif" alt="CBBC" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/cbeebies.gif" alt="CBeebies" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/news.gif" alt="BBC News" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/parliament.gif" alt="BBC Parliament" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/radio_1.gif" alt="Radio 1" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/radio_2.gif" alt="Radio 2" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/radio_3.gif" alt="Radio 3" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/radio_4.gif" alt="Radio 4" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/five_live.gif" alt="Five Live" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/6_music.gif" alt="6Music" /></li>
+<li><img src="http://www.bbc.co.uk/ui/ide/1/images/brand/100/bbc_7.gif" alt="BBC 7" /></li>
+</ol>
+
+	<div id = "frame"> 
+			<div id = "adletcontainer"> 
+				<div id = "adletheader"> 
+					<div  style="float:right; display: inline;"> 
+						<script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=01be6838-aec8-4889-b057-fcdde81cb50f&amp;type=website&amp;buttonText=&amp;style=rotate"></script><a id="close" class = "ref" title="close" href="#">X</a> 
+					</div> 
+					This page is sponsored by 
+				</div> 
+				<div id = "adletcontent"> 
+					<a id = "leftnav" class = "ref" href="#" style="float:left;"><&nbsp;</a> 
+					<div id = "adletleftcontent"> 
+						pesulu
+					</div> 
+					<div id = "adletrightcontent"> 
+						Ads that don't suck!
+					</div> 
+					<a id = "url" class = "ref" href="http://www.pesulu.com">www.pesulu.com</a> 
+					<a id = "rightnav" class = "ref" href="#" style="float:right;">&nbsp;></a> 
+				</div> 
+			</div> 
+		</div> 
+</body>
+</html>

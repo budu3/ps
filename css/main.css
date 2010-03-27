@@ -1,0 +1,162 @@
+			#topbar{
+				height: 39px;
+				/*width: 100%;*/
+				background-color: #006600;
+				color: #FFFFFF;
+				font-family: sans-serif;
+				font-size: 18px;
+				padding: 0px 0px 10px 5px;
+				top: 0;
+			}			
+			#container {
+				margin: auto auto;
+				background-color: #FFFFFF;
+				width: 940px;
+				height: 600px;
+			}
+			#header {
+				/*display: block;*/
+				margin-left: 845px;
+			}
+			#mainpage {
+				background-color: #F8F8F8;
+				font-family: Tahoma;
+				padding: 0px;
+				margin: 0px;
+			}
+			#logo {
+				font-family: Tahoma, Sans-serif;
+				letter-spacing: -1px;
+				color: rgb(255,255,255);
+				padding: 0px 5px 0px 0px;
+				margin: 0px;
+				display: inline;
+			}
+			#tabs {
+				/*background-color: #FFCC00;*/
+				display: inline;
+				padding: 0px;
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				float: right;
+				/*height: 50px;*/
+
+			}
+			#advertisers {
+				background-color: #FFFFCC;
+				border: 1px solid #C3C3C3;
+				padding: 5px 20px 20px 20px;
+			}
+			#formbox {
+				background-color: #F0FFF0;
+				border: 1px solid #C3C3C3;
+				padding: 20px;
+
+			}
+			#content{
+				background-color: #FFFFFF;
+				padding: 10px 10px 10px 10px;
+				height: 400px;
+			}
+			#boxholder{
+				background-color: #FFFFFF;
+				height: 395px;
+
+			}
+			#aboutusbox {
+				padding: 5px 5px 5px 5px;
+				font-family: Tahoma;
+				background-color: #FFFFFF;
+				display: inline;
+				float: left;
+				width: 48%;
+				border-right:1px solid #C3C3C3;
+			}
+		
+			#signupbox {
+				display: inline;
+				width: 50%;
+				float: right;
+				display: inline;
+				height: 395px;	
+				/*background-color: #D0D0D0;*/		
+			}
+
+			#footer {
+				padding: 5px 5px 5px 5px;
+				margin: 0px 0px 0px 460px;
+				color: rgb(102, 102, 102);
+				font-size: small;
+			}
+			.list {
+				/*background-color: #FFCC00;*/
+				position: relative;
+				display: inline;
+				float: right;
+				width:20%;
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				height: 32px;
+				top: 24px;
+				
+			}
+			.ulist {
+				padding-bottom: 5px;
+			}
+			.caption {
+				font-family: Tahoma, Sans-serif;
+				font-size: 12px;
+				color: #FFFFFF;
+				display: inline;
+			}
+
+			.emphasis {
+				font-weight: 800;
+				display: inline;
+				color: #000099;
+				padding: 2px 2px 12px 0px;
+			}
+
+			.selecttab {
+				display: inline;
+				background-color: #FFCC00;
+				padding: 4px 4px 4px 4px;
+				display: inline;
+				margin: 0px 0px 0px 0px;
+				/*float: right;*/
+			}
+			.unselecttab {
+				color: #FFFFFF;
+				display: inline;
+				/*background-color: rgb(51, 51, 51);*/
+				background-color: #006600;
+				padding: 4px 4px 4px 4px;
+				margin: 0px 0px 0px 0px;
+				/*float: right;*/
+			}
+			.statement {
+				font-size: 28px;
+				letter-spacing: -1px;
+			}
+			.statementemphasis {
+				display: inline;
+				color: #000099;
+			}
+			.field {
+				height: 30px;
+				font-size: 20px;
+			}
+			a:link {
+				color: #000000;
+			}
+			a:visited {
+				color: #000000;
+			}
+			a:hover {
+				color: #000000;
+			}			
+			a:active {
+				color: #000000;
+			}

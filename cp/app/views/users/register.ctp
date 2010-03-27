@@ -1,0 +1,11 @@
+<!-- File: /app/views/posts/register.ctp -->	
+	
+<h1>Register</h1>
+<?php
+echo $form->create('User',array('action' => 'register'));
+echo $form->input('username');
+echo $form->label('Password');
+echo $form->password('password');
+//echo $form->input('body', array('rows' => '3'));
+echo $form->end('Register');
+?>
