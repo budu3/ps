@@ -1,22 +1,22 @@
 <?php 
 	//print_r($getwidgets);
-	
-	echo "{widget:[";
+	/*
+	echo '{"widget":[';
 	foreach ($getwidgets as $index=>$value){
 		echo "{";
 		foreach ($getwidgets[$index] as $i => $v){
 			foreach ($getwidgets[$index][$i] as $key => $val){
-				printf($key.":");				
+				printf('"'.$key.'":');				
 				echo '"'.$val.'",';			
 			}		
 		}
-		echo 'version:"0.1"';
+		echo '"version":"0.1"';
 		echo "}";
 	}
 	echo "]}";
-
-	//$objs = json_decode($getwidgets);
-	//print_r($objs);
+*/
+	$objs = json_encode($getwidgets);
+	print_r($objs);
 /*
 {
         program : {
@@ -39,4 +39,3 @@
 */
 //{widget:[{sitename:"Pesulu",url:"http://www.pesulu.com"}]}
 ?>  
-
