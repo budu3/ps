@@ -3,7 +3,7 @@ class UsersController extends AppController
 {
 	var $name = "Users";
 	var $helpers = array('Html', 'Form');
-	
+
 	function index()
 	{
 		
@@ -11,6 +11,8 @@ class UsersController extends AppController
 	
 	function beforeFilter()
 	{
+		$this->layout = 'pesululayout';
+
 		 $this->__validateLoginStatus(); 
 	}
 	

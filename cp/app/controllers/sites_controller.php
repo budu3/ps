@@ -2,6 +2,7 @@
 class SitesController extends AppController{
 	var $name = 'Sites';
 	var $uses = array('Users','Widgets');
+	var $layout = 'gpesululayout';
 	
 	function index(){
 

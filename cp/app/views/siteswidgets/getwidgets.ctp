@@ -15,8 +15,11 @@
 	}
 	echo "]}";
 */
+	//echo "serverResponse(";
 	$objs = json_encode($getwidgets);
+	
 	print_r($objs);
+	//echo ")";
 /*
 {
         program : {

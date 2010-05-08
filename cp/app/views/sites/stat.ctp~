@@ -1,13 +1,13 @@
+
+        
 <h2>Dashboard</h2>
 
 <h3>Campaign Statistics</h3>
 
 <?php
-	echo print_r($rows);
-	//$rows[0];
-	//echo "<br/>";
+	//echo print_r($rows);
 	foreach ($rows as $index=>$value){
-		//print_r($value);
+
 		echo "<b>ID:&nbsp</b>"; echo $value['Widgets']['id']; echo "<br/>";
 		echo "<b>Site name:&nbsp</b>"; echo $value['Widgets']['sitename']; echo "<br/>";
 		echo "<b>Message:&nbsp;</b>"; echo $value['Widgets']['message']; echo "<br/>";
@@ -23,3 +23,12 @@
 	}
 
 ?>
+
+<div id="holder"></div> 
+        <p> 
+            Pie chart with legend, hyperlinks on two first sectors and hover effect.
+        </p> 
+        <p> 
+            Demo of <a href="http://g.raphaeljs.com/">g·Raphaël</a> JavaScript library.
+        </p> 
+

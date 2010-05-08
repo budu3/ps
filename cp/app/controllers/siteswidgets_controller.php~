@@ -7,7 +7,7 @@ class SiteswidgetsController extends AppController{
 	}
 
 	function getWidgets($id){
-		$this->layout = 'json';
+		//$this->layout = '';
 		//$ans = $this->Siteswidget->find('all', array('conditions' => array('Siteswidget.id =' => $id)));
 		$ans = $this->Siteswidget->query("SELECT cp_widgets.sitename, message, displayurl, landingpage FROM cp_siteswidgets, cp_widgets, cp_sites WHERE ( cp_siteswidgets.site_id =2) AND (cp_sites.id = cp_siteswidgets.id);");
 		$this->set('getwidgets',$ans);

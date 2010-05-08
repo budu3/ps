@@ -15,7 +15,7 @@ show up on all of your views, include it here -->
     <div id="menu"></div>
 </div>
 
-<!-- Here's where I want my views to be displayed -->
+<!-- Here's where I want my views to be displayed * -->
 <?php echo $content_for_layout ?>
 
 <!-- Add a footer to each displayed page -->

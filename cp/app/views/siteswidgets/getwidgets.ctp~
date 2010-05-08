@@ -1,5 +1,5 @@
 <?php 
-	print_r($getwidgets);
+	//print_r($getwidgets);
 	/*
 	echo '{"widget":[';
 	foreach ($getwidgets as $index=>$value){
@@ -15,8 +15,11 @@
 	}
 	echo "]}";
 */
+	echo "serverResponse(";
 	$objs = json_encode($getwidgets);
+	
 	print_r($objs);
+	echo ")";
 /*
 {
         program : {

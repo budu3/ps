@@ -67,7 +67,7 @@ class SitesController extends AppController{
 	function stat(){
 		$user_id = $this->Session->read('User.id'); //might be faster to use global var
 		$rows = $this->Widgets->find('all', array('conditions' => array('Widgets.user_id' => $user_id)));
-		set('rows',$rows);
+		$this->set('rows',$rows);
 
 	}
 
